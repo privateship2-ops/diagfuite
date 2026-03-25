@@ -31,11 +31,11 @@ export function CTASection({
                 <ArrowRight className="size-5" />
               </Link>
               <a
-                href="tel:+33561000000"
+                href="tel:+33614468777"
                 className="inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border-2 border-white/40 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors text-base"
               >
                 <Phone className="size-5" />
-                05 61 00 00 00
+                06 14 46 87 77
               </a>
             </div>
           </div>

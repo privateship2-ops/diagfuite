@@ -207,10 +207,10 @@ export default async function BlogPostPage({ params }: Props) {
                     Devis gratuit
                   </Link>
                   <a
-                    href="tel:+33561000000"
+                    href="tel:+33614468777"
                     className="block text-center mt-2 text-sm text-white/60 hover:text-white transition-colors"
                   >
-                    Ou appelez le 05 61 00 00 00
+                    Ou appelez le 06 14 46 87 77
                   </a>
                 </div>
 

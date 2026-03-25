@@ -6,9 +6,9 @@ import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { faqItems } from "@/data/faq";
 
 export const metadata: Metadata = {
-  title: "FAQ — Questions fréquentes sur la recherche de fuite à Toulouse",
+  title: "FAQ — Questions fréquentes recherche de fuite Toulouse",
   description:
-    "Toutes les réponses à vos questions : prix, assurance, convention IRSI, locataire vs propriétaire, délai d'intervention, rapport expertise.",
+    "Prix, assurance, convention IRSI, durée, rapport expertise, locataire vs propriétaire : toutes les réponses sur la recherche de fuite à Toulouse.",
   alternates: { canonical: "https://diagfuite.fr/faq" },
 };
 
@@ -21,6 +21,8 @@ const faqSchema = {
     acceptedAnswer: { "@type": "Answer", text: item.answer },
   })),
 };
+
+const categories = ["Tous", "Tarifs", "Assurance", "Technique", "Pratique", "Responsabilités"];
 
 export default function FaqPage() {
   return (
@@ -37,13 +39,26 @@ export default function FaqPage() {
             Questions fréquentes — Recherche de fuite à Toulouse
           </h1>
           <p className="text-lg text-white/70 max-w-2xl">
-            Toutes les réponses aux questions que nos clients nous posent le plus souvent.
+            Prix, assurance, délais, rapport, responsabilités : toutes les réponses aux questions que nos clients nous posent le plus souvent.
           </p>
         </div>
       </section>
 
       <section className="py-16 lg:py-20 bg-brand-bg">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Categories nav */}
+          <div className="flex flex-wrap gap-2 mb-8 justify-center">
+            {categories.map((cat) => (
+              <span
+                key={cat}
+                className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white border border-gray-200 text-brand-text/70 cursor-default"
+              >
+                {cat}
+              </span>
+            ))}
+          </div>
+
           <FaqAccordion items={faqItems} />
 
           <div className="mt-10 bg-white rounded-2xl border border-gray-100 p-6 text-center">
@@ -68,11 +83,11 @@ export default function FaqPage() {
 
           <div className="mt-6 text-center text-xs text-brand-text/50">
             Voir aussi :{" "}
-            <Link href="/tarifs" className="text-brand-blue hover:underline">nos tarifs</Link>
+            <Link href="/tarifs" className="text-brand-blue hover:underline">nos tarifs de recherche de fuite</Link>
             {" · "}
-            <Link href="/blog" className="text-brand-blue hover:underline">notre blog</Link>
+            <Link href="/blog" className="text-brand-blue hover:underline">notre blog conseil</Link>
             {" · "}
-            <Link href="/prestations" className="text-brand-blue hover:underline">nos prestations</Link>
+            <Link href="/prestations" className="text-brand-blue hover:underline">nos prestations détection non destructive</Link>
           </div>
         </div>
       </section>

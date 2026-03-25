@@ -50,11 +50,11 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+33561000000"
+              href="tel:+33614468777"
               className="flex items-center gap-2 text-sm font-medium text-brand-dark hover:text-brand-blue transition-colors"
             >
               <Phone className="size-4" />
-              05 61 00 00 00
+              06 14 46 87 77
             </a>
             <Link
               href="/contact"
@@ -93,11 +93,11 @@ export function Header() {
           </nav>
           <div className="mt-4 flex flex-col gap-2">
             <a
-              href="tel:+33561000000"
+              href="tel:+33614468777"
               className="flex items-center justify-center gap-2 py-2 text-sm font-medium text-brand-dark border border-brand-dark/20 rounded-xl"
             >
               <Phone className="size-4" />
-              05 61 00 00 00
+              06 14 46 87 77
             </a>
             <Link
               href="/contact"

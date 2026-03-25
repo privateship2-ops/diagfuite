@@ -20,7 +20,7 @@ export default function MentionsLegalesPage() {
               <h2 className="text-xl font-bold text-brand-dark mb-3">Éditeur du site</h2>
               <p>DiagFuite<br />
               Toulouse, France<br />
-              Tél : 05 61 00 00 00<br />
+              Tél : 06 14 46 87 77<br />
               Email : contact@diagfuite.fr</p>
             </section>
 

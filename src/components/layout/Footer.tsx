@@ -47,9 +47,9 @@ export function Footer() {
               Expert en détection de fuites non destructive à Toulouse et sa grande couronne. Agréé assurances, intervention sous 48h.
             </p>
             <div className="flex flex-col gap-2 text-sm text-white/70">
-              <a href="tel:+33561000000" className="flex items-center gap-2 hover:text-brand-blue transition-colors">
+              <a href="tel:+33614468777" className="flex items-center gap-2 hover:text-brand-blue transition-colors">
                 <Phone className="size-4 shrink-0" />
-                05 61 00 00 00
+                06 14 46 87 77
               </a>
               <a href="mailto:contact@diagfuite.fr" className="flex items-center gap-2 hover:text-brand-blue transition-colors">
                 <Mail className="size-4 shrink-0" />
