@@ -112,7 +112,7 @@ export default function PourquoiNousPage() {
             <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80"
+                  src="/images/equipe.jpg"
                   alt="Équipe DiagFuite, experts en détection de fuite Toulouse"
                   fill
                   className="object-cover"

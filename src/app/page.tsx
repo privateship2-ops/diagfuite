@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "DiagFuite — Détection de fuite non destructive à Toulouse",
     description: "Expert en détection de fuites à Toulouse. Non destructif, agréé assurances, rapport expertise. Devis gratuit.",
     url: "https://diagfuite.fr/",
-    images: [{ url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80", width: 1200, height: 630 }],
+    images: [{ url: "https://diagfuite.fr/images/hero.jpg", width: 1200, height: 630 }],
   },
 };
 

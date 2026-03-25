@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Prestations de détection de fuite non destructive — Toulouse",
     description: "Toutes nos techniques de détection non destructive à Toulouse. Rapport expertise inclus.",
     url: "https://diagfuite.fr/prestations",
-    images: [{ url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80" }],
+    images: [{ url: "https://diagfuite.fr/images/thermographie.jpg", width: 1200, height: 630 }],
   },
 };
 
@@ -45,7 +45,7 @@ const prestations = [
       "Rapport d'expertise fourni",
       "Pris en charge par l'assurance",
     ],
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80",
+    image: "/images/degats-eaux.jpg",
     imageAlt: "Détection fuite eau non destructive Toulouse",
   },
   {
@@ -60,7 +60,7 @@ const prestations = [
       "Rapport de conformité",
       "Recommandations de mise en sécurité",
     ],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    image: "/images/canalisation.jpg",
     imageAlt: "Détection fuite gaz Toulouse intervention",
   },
   {
@@ -75,7 +75,7 @@ const prestations = [
       "Aucune perforation des parois",
       "Cartographie des zones humides",
     ],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    image: "/images/thermographie.jpg",
     imageAlt: "Thermographie infrarouge detection fuite Toulouse",
   },
   {
@@ -90,7 +90,7 @@ const prestations = [
       "Rapport avec captures d'écran",
       "Canalisations de 40 à 300 mm",
     ],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+    image: "/images/endoscopie.jpg",
     imageAlt: "Inspection canalisation caméra endoscopique Toulouse",
   },
   {
@@ -105,7 +105,7 @@ const prestations = [
       "Sans excavation préalable",
       "Idéal pour réseaux d'eau enterrés",
     ],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    image: "/images/correlation.jpg",
     imageAlt: "Corrélation acoustique détection fuite canalisation enterrée",
   },
   {
@@ -120,7 +120,7 @@ const prestations = [
       "Localisation précise avec plan",
       "Remis le jour même",
     ],
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
+    image: "/images/rapport.jpg",
     imageAlt: "Rapport expertise détection fuite assurance Toulouse",
   },
 ];

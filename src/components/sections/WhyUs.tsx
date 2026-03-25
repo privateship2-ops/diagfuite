@@ -19,7 +19,7 @@ export function WhyUs() {
           <FadeIn direction="left">
             <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
               <Image
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80"
+                src="/images/technicien-2.jpg"
                 alt="Technicien DiagFuite en intervention de détection de fuite Toulouse"
                 fill
                 className="object-cover"

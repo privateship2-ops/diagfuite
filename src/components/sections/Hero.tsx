@@ -15,7 +15,7 @@ export function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80"
+          src="/images/hero.jpg"
           alt="Détection de fuite non destructive à Toulouse"
           fill
           className="object-cover opacity-20"
