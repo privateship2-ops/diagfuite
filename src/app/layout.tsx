@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingPhone } from "@/components/ui/FloatingPhone";
 import { CookieBanner } from "@/components/ui/CookieBanner";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,7 +41,7 @@ const localBusinessSchema = {
   description:
     "Détection de fuites non destructive à Toulouse et sa grande couronne. Agréé assurances.",
   url: "https://diagfuite.fr",
-  telephone: "+33561000000",
+  telephone: "+33614468777",
   email: "contact@diagfuite.fr",
   address: {
     "@type": "PostalAddress",
@@ -106,6 +107,9 @@ export default function RootLayout({
         <Footer />
         <FloatingPhone />
         <CookieBanner />
+        {process.env.NODE_ENV === "production" && (
+          <GoogleAnalytics gaId="G-B013CEDM42" />
+        )}
       </body>
     </html>
   );
