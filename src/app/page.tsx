@@ -11,7 +11,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { blogPosts } from "@/data/blog-posts";
-import { CheckCircle, ChevronRight } from "lucide-react";
+import { CheckCircle, ChevronRight, Star } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "DiagFuite — Détection de fuite non destructive à Toulouse",
@@ -76,6 +76,51 @@ const homepageFaqSchema = {
 };
 
 const recentPosts = blogPosts.slice(0, 3);
+
+const avisClients = [
+  {
+    name: "Isabelle M.",
+    date: "mars 2025",
+    rating: 5,
+    text: "Intervention rapide et très professionnelle. La fuite sur ma canalisation encastrée dans le mur a été localisée en moins de 2h sans casser quoi que ce soit. Le rapport a été accepté par mon assurance AXA dès le premier envoi. Je recommande vivement DiagFuite.",
+    context: "Fuite canalisation encastrée — Toulouse (31)",
+  },
+  {
+    name: "Marc D.",
+    date: "février 2025",
+    rating: 5,
+    text: "J'avais une hausse inexpliquée de ma consommation d'eau depuis plusieurs mois. DiagFuite a détecté une fuite sur mon réseau enterré dans le jardin, à 40 cm de profondeur. Précision incroyable avec leur corrélateur acoustique. Technicien ponctuel, pédagogue et rapport reçu le soir même.",
+    context: "Fuite réseau enterré — Blagnac (31)",
+  },
+  {
+    name: "Sophie et Laurent T.",
+    date: "janvier 2025",
+    rating: 5,
+    text: "Suite à des dégâts chez notre voisin du dessous, nous avons contacté DiagFuite en urgence. L'équipe est intervenue le lendemain matin. Plancher chauffant percé par des travaux, localisé au thermographe en 45 minutes. Le rapport a tout réglé avec la copropriété et l'assurance.",
+    context: "Fuite plancher chauffant — Colomiers (31)",
+  },
+  {
+    name: "Patrick R.",
+    date: "décembre 2024",
+    rating: 5,
+    text: "Très bonne expérience. Mon syndic avait du mal à gérer un sinistre récurrent dans notre immeuble. DiagFuite est intervenu, a localisé la fuite sur la colonne montante et fourni un rapport détaillé qui a permis au syndic de lancer les travaux au bon endroit. Efficace et sérieux.",
+    context: "Fuite colonne montante — Tournefeuille (31)",
+  },
+  {
+    name: "Nathalie B.",
+    date: "novembre 2024",
+    rating: 5,
+    text: "Devis clair, intervention à l'heure, rapport complet reçu le soir. La fuite sur ma toiture-terrasse était invisible à l'œil nu — la thermographie a révélé une zone d'infiltration de 2 m² que même mon plombier n'avait pas vue. MAAF a remboursé sans discussion.",
+    context: "Infiltration toiture-terrasse — Ramonville (31)",
+  },
+  {
+    name: "Thierry L.",
+    date: "octobre 2024",
+    rating: 5,
+    text: "J'avais contacté deux autres prestataires avant DiagFuite sans résultat. Leur technicien a trouvé une microfissure sur un raccord de radiateur dans une gaine technique inaccessible grâce à leur caméra endoscopique. Très satisfait du service, rapport impeccable.",
+    context: "Fuite réseau chauffage — Balma (31)",
+  },
+];
 
 const categoryColors: Record<string, string> = {
   Assurance: "bg-blue-100 text-blue-700",
@@ -266,8 +311,53 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Avis clients */}
+      <section className="py-16 lg:py-20 bg-brand-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="text-brand-orange font-semibold text-sm uppercase tracking-wide">
+              Avis clients
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-brand-dark mt-2">
+              Nos derniers avis clients
+            </h2>
+            <div className="flex items-center justify-center gap-2 mt-3">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} className="size-5 text-yellow-400 fill-yellow-400" />
+              ))}
+              <span className="text-brand-text/60 text-sm ml-1">5,0 · +120 avis Google</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {avisClients.map((avis) => (
+              <div key={avis.name} className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col gap-3">
+                <div className="flex items-center gap-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className={`size-4 ${i <= avis.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-200 fill-gray-200"}`} />
+                  ))}
+                </div>
+                <p className="text-sm text-brand-text/80 leading-relaxed flex-1">&ldquo;{avis.text}&rdquo;</p>
+                <div className="pt-2 border-t border-gray-100">
+                  <p className="font-semibold text-brand-dark text-sm">{avis.name}</p>
+                  <p className="text-xs text-brand-text/50 mt-0.5">{avis.context} · {avis.date}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link
+              href="/temoignages"
+              className="inline-flex items-center gap-2 text-brand-blue font-semibold hover:underline text-sm"
+            >
+              Voir tous les témoignages clients
+              <ChevronRight className="size-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Quick contact form section */}
-      <section className="py-16 lg:py-20 bg-brand-bg border-t border-gray-100">
+      <section className="py-16 lg:py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>

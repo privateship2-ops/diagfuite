@@ -6,6 +6,8 @@ const quickLinks = [
   { href: "/", label: "Accueil" },
   { href: "/prestations", label: "Prestations" },
   { href: "/tarifs", label: "Tarifs" },
+  { href: "/chercheur-de-fuite", label: "Chercheur de fuite" },
+  { href: "/rapport-expertise", label: "Rapport d'expertise" },
   { href: "/pourquoi-nous", label: "Pourquoi nous" },
   { href: "/processus", label: "Notre processus" },
   { href: "/assurance", label: "Assurance" },
