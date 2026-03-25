@@ -19,6 +19,7 @@ const schema = z.object({
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -29,9 +30,17 @@ export function ContactForm() {
   });
 
   async function onSubmit(data: ContactFormData) {
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1000));
-    console.log("Form data:", data);
+    setSubmitError(null);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    const json = await res.json();
+    if (!res.ok || json.error) {
+      setSubmitError(json.error ?? "Une erreur est survenue. Veuillez réessayer.");
+      return;
+    }
     setSubmitted(true);
   }
 
@@ -161,6 +170,10 @@ export function ContactForm() {
         />
         {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
       </div>
+
+      {submitError && (
+        <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-xl px-4 py-3">{submitError}</p>
+      )}
 
       <p className="text-xs text-brand-text/50">
         * Champs obligatoires. Vos données sont traitées conformément à notre{" "}
