@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon-diagfuite.svg",
+    shortcut: "/favicon-diagfuite.svg",
+    apple: "/favicon-diagfuite.svg",
+  },
 };
 
 const localBusinessSchema = {
